@@ -1,0 +1,40 @@
+html {
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0
+}
+
+.container-lg {
+    max-width: 1012px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.px-3 {
+    padding-right: 16px !important;
+    padding-left: 16px !important
+}
+
+.my-5 {
+    margin-top: 32px !important;
+    margin-bottom: 32px !important
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+a {
+    background-color: transparent;
+    color: #0366d6;
+
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.25em 0;
+}
