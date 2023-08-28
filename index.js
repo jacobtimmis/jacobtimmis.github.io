@@ -21,7 +21,10 @@ function PopulateProjects(projects) {
             AddElement(ProjRoot, 'h3', project.name, 'project-name')
             AddElement(ProjRoot, 'p', project.brief, 'project-brief')
             AddElement(ProjRoot, 'a', 'Check it out here!', 'project-link').href = project.link
-            AddElement(ProjRoot, 'p', new Date(project.date).toDateString(), 'project-date')
+            let projDate = new Date(project.date)
+            if (!isNaN(projDate)) {
+                AddElement(ProjRoot, 'p', projDate.toDateString(), 'project-date')
+            }
         })
     })
 }
