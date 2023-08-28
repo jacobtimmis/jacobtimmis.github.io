@@ -101,3 +101,7 @@ p {
 .section-title::after {
     content: " ";
 }
+
+.about-me {
+    margin: 1em 0;
+}
