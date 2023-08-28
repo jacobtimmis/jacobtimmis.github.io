@@ -20,7 +20,13 @@ function PopulateProjects(projects) {
             let ProjRoot = AddElement(Section, 'div', '', 'project')
             AddElement(ProjRoot, 'h3', project.name, 'project-name')
             AddElement(ProjRoot, 'p', project.brief, 'project-brief')
-            AddElement(ProjRoot, 'a', 'Check it out here!', 'project-link').href = project.link
+            try {
+                let projURL = new URL(project.link)
+                AddElement(ProjRoot, 'a', 'Check it out here!', 'project-link').href = project.link
+            }
+            catch {
+                console.warn(`Invalid url for project ${project.name}`)
+            }
             let projDate = new Date(project.date)
             if (!isNaN(projDate)) {
                 AddElement(ProjRoot, 'p', projDate.toDateString(), 'project-date')
