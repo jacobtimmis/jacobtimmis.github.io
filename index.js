@@ -11,12 +11,18 @@ function fetchProjects() {
 
 function PopulateProjects(projects) {
     const ProjList = document.getElementById('project-list')
-    projects.forEach((project) => {
-        let ProjRoot = AddElement(ProjList, 'div', '', 'project')
-        AddElement(ProjRoot, 'h3', project.name, 'project-name')
-        AddElement(ProjRoot, 'p', project.brief, 'project-brief')
-        AddElement(ProjRoot, 'a', 'Check it out here!', 'project-link').href = project.link
-        AddElement(ProjRoot, 'p', new Date(project.date).toDateString(), 'project-date')
+    projects.forEach((section) => {
+        let Section = AddElement(ProjList, 'div', '', 'section')
+        let SectionTitle = AddElement(Section, 'div', '', 'section-header')
+        AddElement(SectionTitle, 'h2', section.title, 'section-title')
+        AddElement(SectionTitle, 'p', section.brief, 'section-brief')
+        section.list.forEach((project) => {
+            let ProjRoot = AddElement(Section, 'div', '', 'project')
+            AddElement(ProjRoot, 'h3', project.name, 'project-name')
+            AddElement(ProjRoot, 'p', project.brief, 'project-brief')
+            AddElement(ProjRoot, 'a', 'Check it out here!', 'project-link').href = project.link
+            AddElement(ProjRoot, 'p', new Date(project.date).toDateString(), 'project-date')
+        })
     })
 }
 

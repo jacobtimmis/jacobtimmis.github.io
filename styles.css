@@ -39,6 +39,14 @@ h1 {
     margin: 0.25em 0;
 }
 
+h2 {
+    margin: 0.25em 0;
+}
+
+p {
+    margin: 0;
+}
+
 #contact-box {
     display: flex;
     flex-direction: row;
@@ -78,4 +86,17 @@ h1 {
     display: flex;
     gap: 1em;
     font-style: italic;
+}
+
+.section-header {
+    display: flex;
+    align-items: baseline;
+}
+
+.section-title {
+    white-space: pre-wrap;
+}
+
+.section-title::after {
+    content: " ";
 }
