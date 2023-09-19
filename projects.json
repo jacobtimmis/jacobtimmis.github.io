@@ -8,13 +8,19 @@
                 "name": "Rule Reversal",
                 "date": "2023-07-07 UTC",
                 "link": "https://juyr.itch.io/rule-reversal",
-                "brief": "Developed for the GMTK Game Jam 2023, over 48 hours."
+                "brief": "Developed for GMTK Game Jam, over 48 hours."
             },
             {
                 "name": "Lightline",
                 "date": "2023-08-19 UTC",
                 "link": "https://juyr.itch.io/lightline",
-                "brief": "Developed for the 1-Bit Game Jam 2023, in one day."
+                "brief": "Developed for 1-Bit Game Jam, in one day."
+            },
+            {
+                "name": "Snakemeleon",
+                "date": "2023-09-18 UTC",
+                "link": "https://juyr.itch.io/snakemeleon",
+                "brief": "Developed for VimJam 4, over four days."
             }
         ]
     }
