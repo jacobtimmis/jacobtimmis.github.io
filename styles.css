@@ -95,7 +95,7 @@ p {
 
 .section-title {
     white-space: pre-wrap;
-    margin-bottom: 0.5em;
+    margin: 0.5em 0;
 }
 
 .section-title::after {
