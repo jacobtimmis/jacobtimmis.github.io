@@ -23,5 +23,25 @@
                 "brief": "Developed for VimJam 4, over four days."
             }
         ]
+    },
+    {
+        "title": "University Projects",
+        "brief": "Projects done for my CS degree.",
+        "list":
+        [
+            {
+                "name": "Narflow",
+                "brief": "Narrative flow analysis system - my final year project."
+            },
+            {
+                "name": "Mini Java Compiler"
+            },
+            {
+                "name": "Blockchain Simulation App"
+            },
+            {
+                "name": "Planet Protector"
+            }
+        ]
     }
 ]
