@@ -26,12 +26,12 @@
     },
     {
         "title": "University Projects",
-        "brief": "Projects done for my CS degree.",
         "list":
         [
             {
                 "name": "Narflow",
-                "brief": "Narrative flow analysis system - my final year project."
+                "date": "2023-05-12 UTC",
+                "brief": "Webapp to visualise narrative flow - created for my dissertation."
             },
             {
                 "name": "Mini Java Compiler"
