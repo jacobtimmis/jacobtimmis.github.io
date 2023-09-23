@@ -74,18 +74,20 @@ p {
     margin: 0;
 }
 
+.project-title {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+}
+
 .project-brief {
     display: inline;
 }
 
 .project-brief::after {
     content: " ";
-}
-
-.project-date {
-    display: flex;
-    gap: 1em;
-    font-style: italic;
 }
 
 .section-header {

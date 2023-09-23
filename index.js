@@ -18,7 +18,17 @@ function PopulateProjects(projects) {
         AddElement(SectionTitle, 'p', section.brief, 'section-brief')
         section.list.forEach((project) => {
             let ProjRoot = AddElement(Section, 'div', '', 'project')
-            AddElement(ProjRoot, 'h3', project.name, 'project-name')
+            let ProjTitle = AddElement(ProjRoot, 'div', '', 'project-title')
+            AddElement(ProjTitle, 'h3', project.name, 'project-name')
+            let projDate = new Date(project.date)
+            if (!isNaN(projDate)) {
+                let loc_date = projDate.toLocaleDateString('en', {
+                    day: 'numeric',
+                    year: 'numeric',
+                    month: 'long',
+                })
+                AddElement(ProjTitle, 'p', loc_date, 'project-date')
+            }
             AddElement(ProjRoot, 'p', project.brief, 'project-brief')
             try {
                 let projURL = new URL(project.link)
@@ -26,10 +36,6 @@ function PopulateProjects(projects) {
             }
             catch {
                 console.warn(`Invalid url for project ${project.name}`)
-            }
-            let projDate = new Date(project.date)
-            if (!isNaN(projDate)) {
-                AddElement(ProjRoot, 'p', projDate.toDateString(), 'project-date')
             }
         })
     })
