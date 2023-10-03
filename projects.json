@@ -21,6 +21,25 @@
                 "date": "2023-09-18 UTC",
                 "link": "https://juyr.itch.io/snakemeleon",
                 "brief": "Developed for VimJam 4, over four days."
+            },
+            {
+                "name": "The National Museum",
+                "date": "2023-10-02 UTC",
+                "link": "https://juyr.itch.io/the-national-museum",
+                "brief": "Developed for Ludum Dare 54, over 72 hours."
+            }
+        ]
+    },
+    {
+        "title": "Other Games",
+        "brief": "Free, short games.",
+        "list":
+        [
+            {
+                "Name": "Countdown!",
+                "date": "2023-10-03 UTC",
+                "link": "https://juyr.itch.io/countdown",
+                "brief": "Block sliding game, with easily shareable custom levels."
             }
         ]
     },
