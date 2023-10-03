@@ -36,7 +36,7 @@
         "list":
         [
             {
-                "Name": "Countdown!",
+                "name": "Countdown!",
                 "date": "2023-10-03 UTC",
                 "link": "https://juyr.itch.io/countdown",
                 "brief": "Block sliding game, with easily shareable custom levels."
