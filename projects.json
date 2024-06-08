@@ -27,6 +27,12 @@
                 "date": "2023-10-02 UTC",
                 "link": "https://juyr.itch.io/the-national-museum",
                 "brief": "Developed for Ludum Dare 54, over 72 hours."
+            },
+            {
+                "name": "Build Up",
+                "date": "2024-06-03 UTC",
+                "link": "https://juyr.itch.io/bonus-build",
+                "brief": "Developed for PJP Jam 2024-1, over 48 hours."
             }
         ]
     },
