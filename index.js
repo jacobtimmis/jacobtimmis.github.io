@@ -20,9 +20,9 @@ function PopulateProjects(projects) {
         section.list.forEach((project) => {
             if (project.hidden) { return }
             let ProjRoot = AddElement(Section, 'div', '', 'project')
-            if (project.image) {
+            if (project.icon) {
                 let img = document.createElement("img")
-                img.src = "icons/" + project.image
+                img.src = "icons/" + project.icon
                 img.classList = 'project-icon'
                 ProjRoot.appendChild(img)
             }
