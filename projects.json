@@ -64,6 +64,7 @@
     },
     {
         "title": "University Projects",
+        "hidden": true,
         "list":
         [
             {
