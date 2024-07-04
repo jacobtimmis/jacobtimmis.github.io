@@ -46,6 +46,12 @@
                 "date": "2023-10-03 UTC",
                 "link": "https://juyr.itch.io/countdown",
                 "brief": "Block sliding game, with easily shareable custom levels."
+            },
+            {
+                "name": "Split",
+                "date": "2024-07-04 UTC",
+                "link": "games/split.html",
+                "brief": "Puzzle script game about splitting colours."
             }
         ]
     },
