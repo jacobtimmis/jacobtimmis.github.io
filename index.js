@@ -30,12 +30,8 @@ function PopulateProjects(projects) {
                 AddElement(ProjTitle, 'p', loc_date, 'project-date')
             }
             AddElement(ProjRoot, 'p', project.brief, 'project-brief')
-            try {
-                let projURL = new URL(project.link)
+            if (project.link) {
                 AddElement(ProjRoot, 'a', 'Check it out here!', 'project-link').href = project.link
-            }
-            catch {
-                console.warn(`Invalid url for project ${project.name}`)
             }
         })
     })
