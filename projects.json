@@ -29,6 +29,13 @@
                 "brief": "Developed for Ludum Dare 54, over 72 hours."
             },
             {
+                "name": "Burnt Legacy",
+                "date": "2023-12-17 UTC",
+                "link": "https://juyr.itch.io/burnt-legacy",
+                "brief": "Developed for The Case of the Thinky Game Jam, over a few days.",
+                "hidden": true
+            },
+            {
                 "name": "Build Up",
                 "date": "2024-06-03 UTC",
                 "link": "https://juyr.itch.io/bonus-build",
