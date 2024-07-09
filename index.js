@@ -40,7 +40,10 @@ function PopulateProjects(projects) {
             }
             AddElement(ProjInfo, 'p', project.brief, 'project-brief')
             if (project.link) {
-                AddElement(ProjInfo, 'a', 'Check it out here!', 'project-link').href = project.link
+                ProjRoot.onclick = function() {
+                    window.location.href = project.link
+                }                
+                ProjRoot.classList.add('clickable-project')
             }
         })
     })

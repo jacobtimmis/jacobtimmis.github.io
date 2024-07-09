@@ -63,6 +63,14 @@ p {
     align-items: center;
 }
 
+.clickable-project {
+    cursor: pointer;
+}
+
+.clickable-project:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
 .project + .project
 {
     margin-top: 1rem;
