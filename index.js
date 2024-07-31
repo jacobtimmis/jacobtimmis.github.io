@@ -1,58 +1,48 @@
 function fetchProjects() {
     fetch('projects.json')
-    .then((response) => response.json())
-    .then((data) => {
-        PopulateProjects(data)
-    })
-    .catch((error) => {
-        console.error('Error fetching projects:', error)
-    })
+    .then   (response => response.json())
+    .then   (data => populateProjects(data))
+    .catch  (error => console.error('Error fetching projects:', error))
 }
 
-function PopulateProjects(projects) {
-    const ProjList = document.getElementById('project-list')
-    projects.forEach((section) => {
-        if (section.hidden) { return }
-        let Section = AddElement(ProjList, 'div', '', 'section')
-        let SectionTitle = AddElement(Section, 'div', '', 'section-header')
-        AddElement(SectionTitle, 'h2', section.title, 'section-title')
-        AddElement(SectionTitle, 'p', section.brief, 'section-brief')
-        section.list.forEach((project) => {
-            if (project.hidden) { return }
-            let ProjRoot = AddElement(Section, 'div', '', 'project')
-            if (project.icon) {
-                let img = document.createElement("img")
-                img.src = "icons/" + project.icon
-                img.classList = 'project-icon'
-                ProjRoot.appendChild(img)
-            }
-            let ProjInfo = AddElement(ProjRoot, 'div', '', 'project-info')
-            let ProjTitle = AddElement(ProjInfo, 'div', '', 'project-title')
-            AddElement(ProjTitle, 'h3', project.name, 'project-name')
+function populateProjects(projects) {
+    const projList = document.getElementById('project-list')
+    projects.forEach(section => {
+        if (section.hidden) return
+        const sectionRoot = addElement(projList, 'div', '', 'section')
+        const sectionTitle = addElement(sectionRoot, 'div', '', 'section-header')
+        addElement(sectionTitle, 'h2', section.title, 'section-title')
+        addElement(sectionTitle, 'p', section.brief, 'section-brief')
+        section.list.forEach(project => {
+            if (project.hidden) return
+            const projRoot = addElement(sectionRoot, 'div', '', 'project')
+            const icon = addElement(projRoot, 'img', '', 'project-icon')
+            icon.src = "icons/" + project.icon
+            const projInfo = addElement(projRoot, 'div', '', 'project-info')
+            const projTitle = addElement(projInfo, 'div', '', 'project-title')
+            addElement(projTitle, 'h3', project.name, 'project-name')
             if (project.recommended) {
-                AddElement(ProjTitle, 'p', '*', 'project-recommend')
+                addElement(projTitle, 'p', '*', 'project-recommend')
             }
-            let projDate = new Date(project.date)
+            const projDate = new Date(project.date)
             if (!isNaN(projDate)) {
-                let loc_date = projDate.toLocaleDateString('en', {
+                const localeDate = projDate.toLocaleDateString('en', {
                     day: 'numeric',
                     year: 'numeric',
                     month: 'long',
                 })
-                AddElement(ProjTitle, 'p', loc_date, 'project-date')
+                addElement(projTitle, 'p', localeDate, 'project-date')
             }
-            AddElement(ProjInfo, 'p', project.brief, 'project-brief')
+            addElement(projInfo, 'p', project.brief, 'project-brief')
             if (project.link) {
-                ProjRoot.onclick = function() {
-                    window.location.href = project.link
-                }                
-                ProjRoot.classList.add('clickable-project')
+                projRoot.onclick = () => window.location.href = project.link
+                projRoot.classList.add('clickable-project')
             }
         })
     })
 }
 
-function AddElement(parent, type, textContent, classes) {
+function addElement(parent, type, textContent, classes) {
     const element = document.createElement(type)
     element.textContent = textContent
     element.classList = classes
