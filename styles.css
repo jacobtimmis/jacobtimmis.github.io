@@ -96,9 +96,18 @@ p {
 .project-title {
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-content: center;
     flex-direction: row;
+}
+
+.project-date {
+    margin-left: auto;
+}
+
+.project-recommend {
+    color: red;
+    font-weight: bold;
 }
 
 .project-brief {
@@ -126,4 +135,8 @@ p {
 
 .about-me {
     margin: 1em 0;
+}
+
+.end-matter {
+    margin-top: 1em;
 }

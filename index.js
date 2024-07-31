@@ -29,6 +29,9 @@ function PopulateProjects(projects) {
             let ProjInfo = AddElement(ProjRoot, 'div', '', 'project-info')
             let ProjTitle = AddElement(ProjInfo, 'div', '', 'project-title')
             AddElement(ProjTitle, 'h3', project.name, 'project-name')
+            if (project.recommended) {
+                AddElement(ProjTitle, 'p', '*', 'project-recommend')
+            }
             let projDate = new Date(project.date)
             if (!isNaN(projDate)) {
                 let loc_date = projDate.toLocaleDateString('en', {

@@ -9,7 +9,8 @@
                 "date": "2023-07-07 UTC",
                 "link": "https://juyr.itch.io/rule-reversal",
                 "brief": "Developed for GMTK Game Jam, over 48 hours.",
-                "icon": "rule_reversal.png"
+                "icon": "rule_reversal.png",
+                "recommended": true
             },
             {
                 "name": "Lightline",
@@ -45,7 +46,8 @@
                 "date": "2024-06-03 UTC",
                 "link": "https://juyr.itch.io/bonus-build",
                 "brief": "Developed for PJP Jam 2024-1, over 48 hours.",
-                "icon": "bonus_build.png"
+                "icon": "bonus_build.png",
+                "recommended": true
             }
         ]
     },
