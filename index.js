@@ -9,20 +9,20 @@ function populateProjects(projects) {
     const projList = document.getElementById('project-list')
     projects.forEach(section => {
         if (section.hidden) return
-        const sectionRoot = addElement(projList, 'div', '', 'section')
-        const sectionTitle = addElement(sectionRoot, 'div', '', 'section-header')
-        addElement(sectionTitle, 'h2', section.title, 'section-title')
-        addElement(sectionTitle, 'p', section.brief, 'section-brief')
+        const sectionRoot = addElement(projList, 'div', 'section')
+        const sectionTitle = addElement(sectionRoot, 'div', 'section-header')
+        addElement(sectionTitle, 'h2', 'section-title', section.title)
+        addElement(sectionTitle, 'p', 'section-brief', section.brief)
         section.list.forEach(project => {
             if (project.hidden) return
-            const projRoot = addElement(sectionRoot, 'div', '', 'project')
-            const icon = addElement(projRoot, 'img', '', 'project-icon')
+            const projRoot = addElement(sectionRoot, 'div', 'project')
+            const icon = addElement(projRoot, 'img', 'project-icon')
             icon.src = "icons/" + project.icon
-            const projInfo = addElement(projRoot, 'div', '', 'project-info')
-            const projTitle = addElement(projInfo, 'div', '', 'project-title')
-            addElement(projTitle, 'h3', project.name, 'project-name')
+            const projInfo = addElement(projRoot, 'div', 'project-info')
+            const projTitle = addElement(projInfo, 'div', 'project-title')
+            addElement(projTitle, 'h3', 'project-name', project.name)
             if (project.recommended) {
-                addElement(projTitle, 'p', '*', 'project-recommend')
+                addElement(projTitle, 'p', 'project-recommend', '*')
             }
             const projDate = new Date(project.date)
             if (!isNaN(projDate)) {
@@ -31,9 +31,9 @@ function populateProjects(projects) {
                     year: 'numeric',
                     month: 'long',
                 })
-                addElement(projTitle, 'p', localeDate, 'project-date')
+                addElement(projTitle, 'p', 'project-date', localeDate)
             }
-            addElement(projInfo, 'p', project.brief, 'project-brief')
+            addElement(projInfo, 'p', 'project-brief', project.brief)
             if (project.link) {
                 projRoot.onclick = () => window.location.href = project.link
                 projRoot.classList.add('clickable-project')
@@ -42,7 +42,7 @@ function populateProjects(projects) {
     })
 }
 
-function addElement(parent, type, textContent, classes) {
+function addElement(parent, type, classes, textContent) {
     const element = document.createElement(type)
     element.textContent = textContent
     element.classList = classes
