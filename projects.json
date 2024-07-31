@@ -50,17 +50,9 @@
         ]
     },
     {
-        "title": "Other Games",
-        "brief": "Free, short games.",
+        "title": "PuzzleScript Games",
         "list":
         [
-            {
-                "name": "Countdown!",
-                "date": "2023-10-03 UTC",
-                "link": "https://juyr.itch.io/countdown",
-                "brief": "Block sliding game, with easily shareable custom levels.",
-                "icon": "countdown.png"
-            },
             {
                 "name": "Split",
                 "date": "2024-07-04 UTC",
@@ -74,6 +66,19 @@
                 "link": "games/passersby.html",
                 "brief": "Puzzle script game about love.",
                 "icon": "passersby.png"
+            }
+        ]
+    },
+    {
+        "title": "Other Games",
+        "list":
+        [
+            {
+                "name": "Countdown!",
+                "date": "2023-10-03 UTC",
+                "link": "https://juyr.itch.io/countdown",
+                "brief": "Block sliding game, with easily shareable custom levels.",
+                "icon": "countdown.png"
             }
         ]
     },
