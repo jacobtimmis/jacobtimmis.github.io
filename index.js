@@ -1,8 +1,12 @@
-function fetchProjects() {
+document.addEventListener('DOMContentLoaded', begin)
+
+function begin() {
     fetch('projects.json')
-    .then   (response => response.json())
-    .then   (data => populateProjects(data))
-    .catch  (error => console.error('Error fetching projects:', error))
+        .then   (response => response.json())
+        .then   (data => populateProjects(data))
+        .catch  (error => console.error('Error fetching projects:', error))
+    gameEmbed = document.getElementById('game-embed')
+    iframe = document.getElementById('iframe')
 }
 
 function populateProjects(projects) {
@@ -35,7 +39,15 @@ function populateProjects(projects) {
             }
             addElement(projInfo, 'p', 'project-brief', project.brief)
             if (project.link) {
-                projRoot.onclick = () => window.location.href = project.link
+                if (project.embed) {
+                    projRoot.onclick = () => {
+                        iframe.addEventListener("load", showGameEmbed)
+                        iframe.src = project.link
+                    }
+                }
+                else {
+                    projRoot.onclick = () => window.location.href = project.link
+                }
                 projRoot.classList.add('clickable-project')
             }
         })
@@ -50,5 +62,10 @@ function addElement(parent, type, classes, textContent) {
     return element
 }
 
-// Call fetchProjects when the page loads
-document.addEventListener('DOMContentLoaded', fetchProjects)
+function showGameEmbed () {
+    gameEmbed.style.display = 'flex'
+}
+
+function hideGameEmbed () {
+    gameEmbed.style.display = 'none'
+}

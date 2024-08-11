@@ -60,14 +60,16 @@
                 "date": "2024-07-04 UTC",
                 "link": "games/split.html",
                 "brief": "Puzzle script game about splitting colours.",
-                "icon": "split.png"
+                "icon": "split.png",
+                "embed": true
             },
             {
                 "name": "Passers By",
                 "date": "2024-07-10 UTC",
                 "link": "games/passersby.html",
                 "brief": "Puzzle script game about love.",
-                "icon": "passersby.png"
+                "icon": "passersby.png",
+                "embed": true
             }
         ]
     },

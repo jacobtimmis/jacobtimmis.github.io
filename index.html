@@ -5,8 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Jacob Timmis' Stuff</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <script src="index.js"></script>
-
+        
         <link rel="canonical" href="https://jacobtimmis.github.io/">
         <meta property="og:title" content="jacobtimmis.github.io">
         <meta property="og:locale" content="en_GB">
@@ -39,6 +40,15 @@
             <hr />
             <span class="project-recommend">*</span>
             <span>recommended</span>
+        </div>
+        
+        <div id="game-embed" onclick="hideGameEmbed()">
+            <button id="close-game-embed" onclick="hideGameEmbed()">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div id="iframe-outer">
+                <iframe id="iframe" frameborder="0" allowfullscreen></iframe>        
+            </div>
         </div>
 
     </body>
