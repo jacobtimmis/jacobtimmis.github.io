@@ -59,7 +59,7 @@
                 "name": "Split",
                 "date": "2024-07-04 UTC",
                 "link": "games/split.html",
-                "brief": "Puzzle script game about splitting colours.",
+                "brief": "Block sliding game about separating colours.",
                 "icon": "split.png",
                 "embed": true
             },
@@ -67,7 +67,7 @@
                 "name": "Passers By",
                 "date": "2024-07-10 UTC",
                 "link": "games/passersby.html",
-                "brief": "Puzzle script game about love.",
+                "brief": "Help people find love...",
                 "icon": "passersby.png",
                 "embed": true
             }
