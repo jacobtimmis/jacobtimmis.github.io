@@ -93,16 +93,23 @@ p {
     margin-right: 16px;
 }
 
-.project-title {
+.project-header {
     display: flex;
     align-items: baseline;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.project-title {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .project-date {
-    margin-left: auto;
+    /* margin-left: auto; */
+    color: lightgray;
 }
 
 .project-recommend {
@@ -121,12 +128,14 @@ p {
 .section-header {
     display: flex;
     align-items: baseline;
-    gap: 16px;
+    gap: 0 16px;
+    margin: 1rem 0;
+    flex-wrap: wrap;
 }
 
 .section-title {
     white-space: pre-wrap;
-    margin: 0.5em 0;
+    margin: 0;
 }
 
 .section-title::after {

@@ -23,7 +23,8 @@ function populateProjects(projects) {
             const icon = addElement(projRoot, 'img', 'project-icon')
             icon.src = "icons/" + project.icon
             const projInfo = addElement(projRoot, 'div', 'project-info')
-            const projTitle = addElement(projInfo, 'div', 'project-title')
+            const projHeader = addElement(projInfo, 'div', 'project-header')
+            const projTitle = addElement(projHeader, 'div', 'project-title')
             addElement(projTitle, 'h3', 'project-name', project.name)
             if (project.recommended) {
                 addElement(projTitle, 'p', 'project-recommend', '*')
@@ -35,7 +36,7 @@ function populateProjects(projects) {
                     year: 'numeric',
                     month: 'long',
                 })
-                addElement(projTitle, 'p', 'project-date', localeDate)
+                addElement(projHeader, 'p', 'project-date', localeDate)
             }
             addElement(projInfo, 'p', 'project-brief', project.brief)
             if (project.link) {
