@@ -51,6 +51,7 @@ p {
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    margin: 1rem 0;
 }
 
 /* #project-panel */
