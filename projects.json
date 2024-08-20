@@ -1,7 +1,7 @@
 [
     {
-        "title": "Jam Games",
-        "brief": "Mini games made under a time limit.",
+        "title": "Jams",
+        "brief": "Small games made under a time limit.",
         "list": 
         [
             {
@@ -59,7 +59,8 @@
         ]
     },
     {
-        "title": "PuzzleScript Games",
+        "title": "PuzzleScript",
+        "brief": "Puzzle games made with PuzzleScript.",
         "list":
         [
             {
@@ -81,7 +82,7 @@
         ]
     },
     {
-        "title": "Other Games",
+        "title": "Other",
         "list":
         [
             {
