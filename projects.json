@@ -48,6 +48,13 @@
                 "brief": "Developed for PJP Jam 2024-1, over 48 hours.",
                 "icon": "bonus_build.png",
                 "recommended": true
+            },
+            {
+                "name": "The Inspector",
+                "date": "2024-08-20 UTC",
+                "link": "https://juyr.itch.io/inspector",
+                "brief": "Developed for GMTK Jam 2024, over 96 hours.",
+                "icon": "inspector.png"
             }
         ]
     },
