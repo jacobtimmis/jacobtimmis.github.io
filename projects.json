@@ -55,6 +55,13 @@
                 "link": "https://juyr.itch.io/inspector",
                 "brief": "Developed for GMTK Jam 2024, over 96 hours.",
                 "icon": "inspector.png"
+            },
+            {
+                "name": "King of the Tower",
+                "date": "2024-10-11 UTC",
+                "link": "https://juyr.itch.io/kott",
+                "brief": "Developed for 1-Bit Jam 4, over a few days.",
+                "icon": "kott.png"
             }
         ]
     },
