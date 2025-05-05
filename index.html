@@ -22,43 +22,54 @@
         <meta property="twitter:title" content="jacobtimmis.github.io">
     </head>
 
-    <body class="container-lg px-3 my-5">
-        
-        <h1 class="main-title">Games by Jacob Timmis</h1>
-
-        <div id="contact-box">
-            <a href="mailto: jacobtimmis07@gmail.com">Email</a>
-            <a href="https://github.com/jacobtimmis">GitHub</a>
-            <a href="https://juyr.itch.io/">Itch</a>
+    <body>
+        <div class="container-lg px-3 my-5">
+            <h1 class="main-title">Games by Jacob Timmis</h1>
+    
+            <div id="contact-box">
+                <a href="mailto: jacobtimmis07@gmail.com">Email</a>
+                <a href="https://github.com/jacobtimmis">GitHub</a>
+                <a href="https://juyr.itch.io/">Itch</a>
+            </div>
         </div>
 
         <!-- <p class="about-me">hello :)</p>       -->
 
-        <hr />
+        <div class="gif-container">
+            <div class="gif-grid">
+                <img src="gifs/puzzlescripts.gif" class="gif" />
+                <img src="gifs/inspector.gif" class="gif" />
+                <img src="gifs/rr.gif" class="gif" />
+                <img src="gifs/other.gif" class="gif" />
+            </div>
+        </div>
 
-        <div id="project-panel">
-            <div id="project-list"></div>
+        <div class="container-lg px-3 my-5">
+            <div id="project-panel">
+                <div id="project-list"></div>
+            </div>
+    
+            <div class="end-matter">
+                <hr />
+                <div>
+                    <span class="project-recommend">*</span>
+                    recommended
+                </div>
+                <div id="website-update">
+                    this website was last updated today
+                </div>
+            </div>
+            
+            <div id="game-embed" onclick="hideGameEmbed()">
+                <button id="close-game-embed" onclick="hideGameEmbed()">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+                <div id="iframe-outer">
+                    <iframe id="iframe" frameborder="0" allowfullscreen></iframe>        
+                </div>
+            </div>
         </div>
 
-        <div class="end-matter">
-            <hr />
-            <div>
-                <span class="project-recommend">*</span>
-                recommended
-            </div>
-            <div id="website-update">
-                this website was last updated today
-            </div>
-        </div>
-        
-        <div id="game-embed" onclick="hideGameEmbed()">
-            <button id="close-game-embed" onclick="hideGameEmbed()">
-                <span class="material-symbols-outlined">close</span>
-            </button>
-            <div id="iframe-outer">
-                <iframe id="iframe" frameborder="0" allowfullscreen></iframe>        
-            </div>
-        </div>
 
     </body>
 </html>
