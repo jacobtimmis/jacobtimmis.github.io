@@ -201,3 +201,20 @@ p {
 #website-update {
     color: lightgray;
 }
+
+.gif-container {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gif-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gif {
+    display: block;
+    width: 25%;
+}
