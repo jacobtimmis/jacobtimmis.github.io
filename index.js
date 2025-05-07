@@ -14,21 +14,18 @@ function populateProjects(projects) {
     const smallEntry = document.getElementById('small-entry')
     const starGrid = document.getElementById('star-grid')
     const starEntry = document.getElementById('star-entry')
-    for (s of projects) {
-        if (s.hidden) { continue }
-        for (p of s.list) {
-            if (p.hidden) { continue }
-            if (p.gif) {
-                const projectEntry = starEntry.content.cloneNode(true)
-                setupEntry(projectEntry)
-                const projectScreen = projectEntry.querySelector('.screen');
-                projectScreen.src = "gifs/" + p.gif            
-                starGrid.appendChild(projectEntry)
-            } else {
-                const projectEntry = smallEntry.content.cloneNode(true)
-                setupEntry(projectEntry)
-                projList.appendChild(projectEntry)
-            }
+    for (p of projects) {
+        if (p.hidden) { continue }
+        if (p.gif) {
+            const projectEntry = starEntry.content.cloneNode(true)
+            setupEntry(projectEntry)
+            const projectScreen = projectEntry.querySelector('.screen');
+            projectScreen.src = "gifs/" + p.gif            
+            starGrid.appendChild(projectEntry)
+        } else {
+            const projectEntry = smallEntry.content.cloneNode(true)
+            setupEntry(projectEntry)
+            projList.appendChild(projectEntry)
         }
     }
 }
