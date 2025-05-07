@@ -22,6 +22,41 @@
         <meta property="twitter:title" content="jacobtimmis.github.io">
     </head>
 
+    <template id="small-entry">
+        <div class="project">
+            <img class="project-icon" src="icons/inspector.png">
+            <div class="project-info">
+                <div class="project-header">
+                    <div class="project-title">
+                        <h3 class="project-name">The Inspector</h3>
+                        <p class="project-recommend">*</p>
+                    </div>
+                    <p class="project-date">August 20, 2024</p>
+                </div>
+                <p class="project-brief">Developed for GMTK Jam 2024, over 96 hours.</p>
+            </div>
+        </div>
+    </template>
+
+    <template id="star-entry">
+        <div class="">
+            <img class="screen" src="gifs/inspector.gif" />
+            <div class="project">
+                <img class="project-icon" src="icons/inspector.png">
+                <div class="project-info">
+                    <div class="project-header">
+                        <div class="project-title">
+                            <h3 class="project-name">The Inspector</h3>
+                            <p class="project-recommend">*</p>
+                        </div>
+                        <p class="project-date">August 20, 2024</p>
+                    </div>
+                    <p class="project-brief">Developed for GMTK Jam 2024, over 96 hours.</p>
+                </div>
+            </div>
+        </div>        
+    </template>
+
     <body>
         <div class="container-lg px-3 my-5">
             <h1 class="main-title">Games by Jacob Timmis</h1>
@@ -32,44 +67,33 @@
                 <a href="https://juyr.itch.io/">Itch</a>
             </div>
         </div>
-
-        <!-- <p class="about-me">hello :)</p>       -->
-
-        <div class="gif-container">
-            <div class="gif-grid">
-                <img src="gifs/puzzlescripts.gif" class="gif" />
-                <img src="gifs/inspector.gif" class="gif" />
-                <img src="gifs/rr.gif" class="gif" />
-                <img src="gifs/other.gif" class="gif" />
+        
+        <div class="container-lg px-3 my-5 flex-v">            
+            <div id="star-grid" class="flex-h">
+            </div>
+            <div id="project-list">
             </div>
         </div>
 
-        <div class="container-lg px-3 my-5">
-            <div id="project-panel">
-                <div id="project-list"></div>
+        <div class="end-matter container-lg px-3 my-5" style="margin-top: 0;">
+            <hr />
+            <div>
+                <span class="project-recommend">*</span>
+                recommended
             </div>
-    
-            <div class="end-matter">
-                <hr />
-                <div>
-                    <span class="project-recommend">*</span>
-                    recommended
-                </div>
-                <div id="website-update">
-                    this website was last updated today
-                </div>
-            </div>
-            
-            <div id="game-embed" onclick="hideGameEmbed()">
-                <button id="close-game-embed" onclick="hideGameEmbed()">
-                    <span class="material-symbols-outlined">close</span>
-                </button>
-                <div id="iframe-outer">
-                    <iframe id="iframe" frameborder="0" allowfullscreen></iframe>        
-                </div>
+            <div id="website-update">
+                this website was last updated today
             </div>
         </div>
 
+        <div id="game-embed" onclick="hideGameEmbed()">
+            <button id="close-game-embed" onclick="hideGameEmbed()">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div id="iframe-outer">
+                <iframe id="iframe" frameborder="0" allowfullscreen></iframe>        
+            </div>
+        </div>
 
     </body>
 </html>

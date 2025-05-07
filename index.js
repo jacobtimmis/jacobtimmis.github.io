@@ -11,48 +11,59 @@ function begin() {
 
 function populateProjects(projects) {
     const projList = document.getElementById('project-list')
-    projects.forEach(section => {
-        if (section.hidden) return
-        const sectionRoot = addElement(projList, 'div', 'section')
-        const sectionTitle = addElement(sectionRoot, 'div', 'section-header')
-        addElement(sectionTitle, 'h2', 'section-title', section.title)
-        addElement(sectionTitle, 'p', 'section-brief', section.brief)
-        section.list.forEach(project => {
-            if (project.hidden) return
-            const projRoot = addElement(sectionRoot, 'div', 'project')
-            const icon = addElement(projRoot, 'img', 'project-icon')
-            icon.src = "icons/" + project.icon
-            const projInfo = addElement(projRoot, 'div', 'project-info')
-            const projHeader = addElement(projInfo, 'div', 'project-header')
-            const projTitle = addElement(projHeader, 'div', 'project-title')
-            addElement(projTitle, 'h3', 'project-name', project.name)
-            if (project.recommended) {
-                addElement(projTitle, 'p', 'project-recommend', '*')
+    const smallEntry = document.getElementById('small-entry')
+    const starGrid = document.getElementById('star-grid')
+    const starEntry = document.getElementById('star-entry')
+    for (s of projects) {
+        if (s.hidden) { continue }
+        for (p of s.list) {
+            if (p.hidden) { continue }
+            if (p.gif) {
+                const projectEntry = starEntry.content.cloneNode(true)
+                setupEntry(projectEntry)
+                const projectScreen = projectEntry.querySelector('.screen');
+                projectScreen.src = "gifs/" + p.gif            
+                starGrid.appendChild(projectEntry)
+            } else {
+                const projectEntry = smallEntry.content.cloneNode(true)
+                setupEntry(projectEntry)
+                projList.appendChild(projectEntry)
             }
-            const projDate = new Date(project.date)
-            if (!isNaN(projDate)) {
-                const localeDate = projDate.toLocaleDateString('en', {
-                    day: 'numeric',
-                    year: 'numeric',
-                    month: 'long',
-                })
-                addElement(projHeader, 'p', 'project-date', localeDate)
-            }
-            addElement(projInfo, 'p', 'project-brief', project.brief)
-            if (project.link) {
-                if (project.embed) {
-                    projRoot.onclick = () => {
-                        iframe.addEventListener("load", showGameEmbed)
-                        iframe.src = project.link
-                    }
-                }
-                else {
-                    projRoot.onclick = () => window.location.href = project.link
-                }
-                projRoot.classList.add('clickable-project')
-            }
+        }
+    }
+}
+
+function setupEntry (projectEntry) {
+    const projectIcon = projectEntry.querySelector('.project-icon');
+    projectIcon.src = "icons/" + p.icon
+    const projectName = projectEntry.querySelector('.project-name');
+    projectName.textContent = p.name
+    const projectRecommend = projectEntry.querySelector('.project-recommend');
+    if (p.recommended) {
+        projectRecommend.style.display = 'block'
+    } else {
+        projectRecommend.style.display = 'none'
+    }
+    const projectDate = projectEntry.querySelector('.project-date');
+    const date = new Date(p.date)
+    if (!isNaN(date)) {
+        const localeDate = date.toLocaleDateString('en', {
+            day: 'numeric',
+            year: 'numeric',
+            month: 'long',
         })
-    })
+        projectDate.textContent = localeDate
+    } else {
+        projectDate.textContent = ""
+    }
+    const projectBrief = projectEntry.querySelector('.project-brief');
+    projectBrief.textContent = p.brief
+    let link = p.link
+    if (link) {
+        const projRoot = projectEntry.querySelector('.project');
+        projRoot.onclick = () => window.location.href = link
+        projRoot.classList.add('clickable-project')
+    }
 }
 
 function addElement(parent, type, classes, textContent) {

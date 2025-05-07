@@ -66,6 +66,7 @@ p {
 
 .clickable-project {
     cursor: pointer;
+    border-radius: 8px;
 }
 
 .clickable-project:hover {
@@ -217,4 +218,21 @@ p {
 .gif {
     display: block;
     width: 25%;
+}
+
+.screen {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.flex-h {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: calc(50% - (1rem / 2)) calc(50% - (1rem / 2));
+}
+
+.flex-v {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
