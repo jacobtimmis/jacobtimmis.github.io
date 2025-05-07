@@ -3,7 +3,7 @@
         "name": "Rule Reversal",
         "date": "2023-07-07 UTC",
         "link": "https://juyr.itch.io/rule-reversal",
-        "brief": "Developed for GMTK Game Jam, over 48 hours.",
+        "brief": "Two cats, different rules",
         "icon": "rule_reversal.png",
         "recommended": true,
         "gif": "rr.gif"
@@ -12,28 +12,28 @@
         "name": "Lightline",
         "date": "2023-08-19 UTC",
         "link": "https://juyr.itch.io/lightline",
-        "brief": "Developed for 1-Bit Game Jam, in one day.",
+        "brief": "Cowboy, roguelike, survive the night",
         "icon": "light_line.png"
     },
     {
         "name": "Snakemeleon",
         "date": "2023-09-18 UTC",
         "link": "https://juyr.itch.io/snakemeleon",
-        "brief": "Developed for VimJam 4, over four days.",
+        "brief": "Color changing snake sokoban",
         "icon": "snakemeleon.png"
     },
     {
         "name": "The National Museum",
         "date": "2023-10-02 UTC",
         "link": "https://juyr.itch.io/the-national-museum",
-        "brief": "Developed for Ludum Dare 54, over 72 hours.",
+        "brief": "Museum manager - inventory management & tower defense",
         "icon": "museum.png"
     },
     {
         "name": "Burnt Legacy",
         "date": "2023-12-17 UTC",
         "link": "https://juyr.itch.io/burnt-legacy",
-        "brief": "Developed for The Case of the Thinky Game Jam, over a few days.",
+        "brief": "Document Detective Mystery",
         "icon": "burnt_legacy.png",
         "hidden": true
     },
@@ -41,7 +41,7 @@
         "name": "Bonus Build",
         "date": "2024-06-03 UTC",
         "link": "https://juyr.itch.io/bonus-build",
-        "brief": "Developed for PJP Jam 2024-1, over 48 hours.",
+        "brief": "Block stacking roguelike, high-score chaser",
         "icon": "bonus_build.png",
         "recommended": true
     },
@@ -49,22 +49,23 @@
         "name": "The Inspector",
         "date": "2024-08-20 UTC",
         "link": "https://juyr.itch.io/inspector",
-        "brief": "Developed for GMTK Jam 2024, over 96 hours.",
+        "brief": "Solve sliding puzzles on a strange island",
         "icon": "inspector.png",
-        "gif": "inspector.gif"
+        "gif": "inspector.gif",
+        "recommended": true
     },
     {
         "name": "King of the Tower",
         "date": "2024-10-11 UTC",
         "link": "https://juyr.itch.io/kott",
-        "brief": "Developed for 1-Bit Jam 4, over a few days.",
+        "brief": "Retro 1-bit platformer",
         "icon": "kott.png"
     },
     {
         "name": "Split",
         "date": "2024-07-04 UTC",
         "link": "games/split.html",
-        "brief": "Block sliding game about separating colours.",
+        "brief": "Rule discovery puzzler",
         "icon": "split.png",
         "embed": true
     },
@@ -80,7 +81,7 @@
         "name": "Countdown!",
         "date": "2023-10-03 UTC",
         "link": "https://juyr.itch.io/countdown",
-        "brief": "Block sliding game, with easily shareable custom levels.",
+        "brief": "Solve puzzles and share custom levels",
         "icon": "countdown.png"
     }
 ]
