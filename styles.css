@@ -225,14 +225,41 @@ p {
     border-radius: 8px 8px 0 0;
 }
 
-.flex-h {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: calc(50% - (1rem / 2)) calc(50% - (1rem / 2));
-}
-
 .flex-v {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+:root {
+  --star-grid-gap: 1rem;
+  --star-grid-min-item-width: 220px;
+  --star-grid-max-columns: 2;
+}
+
+.star-grid {
+  display: grid;
+  gap: var(--star-grid-gap);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(
+      min(
+        100%,
+        max(
+          var(--star-grid-min-item-width),
+          calc((100% - (var(--star-grid-max-columns) - 1) * var(--star-grid-gap)) / var(--star-grid-max-columns))
+        )
+      ),
+      1fr
+    )
+  );
+}
+
+.star-entry {
+}
+
+
+.star-entry .project {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
