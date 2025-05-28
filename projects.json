@@ -6,7 +6,10 @@
         "brief": "Two cats, different rules",
         "icon": "rule_reversal.png",
         "recommended": true,
-        "gif": "rr.gif"
+        "images": [
+            "rr_1.png", "rr_2.png", "rr_3.png", "rr_4.png",
+            "rr_5.png", "rr_6.png", "rr_7.png"
+        ]
     },
     {
         "name": "Lightline",
@@ -51,7 +54,10 @@
         "link": "https://juyr.itch.io/inspector",
         "brief": "Solve sliding puzzles on a strange island",
         "icon": "inspector.png",
-        "gif": "inspector.gif",
+        "images": [
+            "ti_1.png", "ti_2.png", "ti_3.png", "ti_4.png", "ti_5.png"
+        ],
+        "imageDelay": 1500,
         "recommended": true
     },
     {
