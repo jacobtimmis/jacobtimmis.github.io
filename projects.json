@@ -1,5 +1,14 @@
 [
     {
+        "name": "Odysseed",
+        "date": "2025-08-17 UTC",
+        "link": "https://dfishy.itch.io/odysseed",
+        "brief": "Seed collecting adventure",
+        "icon": "seed.png",
+        "image": "os_0.png",
+        "altImage": "os_1.png"
+    },
+    {
         "name": "Rule Reversal",
         "date": "2023-07-07 UTC",
         "link": "https://juyr.itch.io/rule-reversal",
@@ -18,20 +27,13 @@
         "altImage": "inspector_1.png"
     },
     {
-        "name": "Odysseed",
-        "date": "2025-08-17 UTC",
-        "link": "https://dfishy.itch.io/odysseed",
-        "brief": "Seed collecting adventure",
-        "icon": "seed.png",
-        "image": "os_0.png",
-        "altImage": "os_1.png"
-    },
-    {
         "name": "Bonus Build",
         "date": "2024-06-03 UTC",
         "link": "https://juyr.itch.io/bonus-build",
         "brief": "Block stacking roguelike, high-score chaser",
-        "icon": "bonus_build.png"
+        "icon": "bonus_build.png",
+        "image": "bb_0.png",
+        "altImage": "bb_1.png"
     },
     {
         "name": "Lightline",
