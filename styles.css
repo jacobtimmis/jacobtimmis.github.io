@@ -1,5 +1,5 @@
 :root {
-    --corner-radius: 2px
+    --corner-radius: 5px
 }
 
 html {
@@ -116,11 +116,6 @@ p {
 .project-date {
     /* margin-left: auto; */
     color: lightgray;
-}
-
-.project-recommend {
-    color: red;
-    font-weight: bold;
 }
 
 .project-brief {

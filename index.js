@@ -56,12 +56,6 @@ function setupEntry (projectEntry) {
     projectIcon.src = "icons/" + p.icon
     const projectName = projectEntry.querySelector('.project-name')
     projectName.textContent = p.name
-    const projectRecommend = projectEntry.querySelector('.project-recommend')
-    if (p.recommended) {
-        projectRecommend.style.display = 'block'
-    } else {
-        projectRecommend.style.display = 'none'
-    }
     const projectDate = projectEntry.querySelector('.project-date')
     const date = new Date(p.date)
     if (!isNaN(date)) {
