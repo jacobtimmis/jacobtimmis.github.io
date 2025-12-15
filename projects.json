@@ -5,16 +5,17 @@
         "link": "https://juyr.itch.io/rule-reversal",
         "brief": "Two cats, different rules",
         "icon": "rule_reversal.png",
-        "recommended": true,
         "image": "rr_1.png",
         "altImage": "rr_0.png"
     },
     {
-        "name": "Lightline",
-        "date": "2023-08-19 UTC",
-        "link": "https://juyr.itch.io/lightline",
-        "brief": "Cowboy, roguelike, survive the night",
-        "icon": "light_line.png"
+        "name": "The Inspector",
+        "date": "2024-08-20 UTC",
+        "link": "https://juyr.itch.io/inspector",
+        "brief": "Solve sliding puzzles on a strange island",
+        "icon": "inspector.png",
+        "image": "inspector_0.png",
+        "altImage": "inspector_1.png"
     },
     {
         "name": "Odysseed",
@@ -24,44 +25,18 @@
         "icon": "seed.png"
     },
     {
-        "name": "Snakemeleon",
-        "date": "2023-09-18 UTC",
-        "link": "https://juyr.itch.io/snakemeleon",
-        "brief": "Color changing snake sokoban",
-        "icon": "snakemeleon.png"
-    },
-    {
-        "name": "The National Museum",
-        "date": "2023-10-02 UTC",
-        "link": "https://juyr.itch.io/the-national-museum",
-        "brief": "Inventory management meets tower defense",
-        "icon": "museum.png"
-    },
-    {
-        "name": "Burnt Legacy",
-        "date": "2023-12-17 UTC",
-        "link": "https://juyr.itch.io/burnt-legacy",
-        "brief": "Document Detective Mystery",
-        "icon": "burnt_legacy.png",
-        "hidden": true
+        "name": "Lightline",
+        "date": "2023-08-19 UTC",
+        "link": "https://juyr.itch.io/lightline",
+        "brief": "Cowboy, roguelike, survive the night",
+        "icon": "light_line.png"
     },
     {
         "name": "Bonus Build",
         "date": "2024-06-03 UTC",
         "link": "https://juyr.itch.io/bonus-build",
         "brief": "Block stacking roguelike, high-score chaser",
-        "icon": "bonus_build.png",
-        "recommended": true
-    },
-    {
-        "name": "The Inspector",
-        "date": "2024-08-20 UTC",
-        "link": "https://juyr.itch.io/inspector",
-        "brief": "Solve sliding puzzles on a strange island",
-        "icon": "inspector.png",
-        "image": "inspector_0.png",
-        "altImage": "inspector_1.png",
-        "recommended": true
+        "icon": "bonus_build.png"
     },
     {
         "name": "King of the Tower",
@@ -76,6 +51,28 @@
         "link": "https://dfishy.itch.io/power-drill",
         "brief": "Mining game, with roguelike upgrades",
         "icon": "michael.png"
+    },
+    {
+        "name": "The National Museum",
+        "date": "2023-10-02 UTC",
+        "link": "https://juyr.itch.io/the-national-museum",
+        "brief": "Inventory management meets tower defense",
+        "icon": "museum.png"
+    },
+    {
+        "name": "Snakemeleon",
+        "date": "2023-09-18 UTC",
+        "link": "https://juyr.itch.io/snakemeleon",
+        "brief": "Color changing snake sokoban",
+        "icon": "snakemeleon.png"
+    },
+    {
+        "name": "Burnt Legacy",
+        "date": "2023-12-17 UTC",
+        "link": "https://juyr.itch.io/burnt-legacy",
+        "brief": "Document Detective Mystery",
+        "icon": "burnt_legacy.png",
+        "hidden": true
     },
     {
         "name": "Split",
