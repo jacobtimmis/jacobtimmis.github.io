@@ -16,25 +16,14 @@ function populateProjects(projects) {
     const starEntry = document.getElementById('star-entry')
     for (p of projects) {
         if (p.hidden) { continue }
-        if (p.images) {
+        if (p.image) {
             const projectEntry = starEntry.content.cloneNode(true)
             setupEntry(projectEntry)
             const projectScreen = projectEntry.querySelector('.screen')
-            projectScreen.src = "images/" + p.images[0]
-            if (p.images.length > 1) {
-                let index = 0
-                let imageDelay = 1000
-                if (p.imageDelay) {
-                    imageDelay = p.imageDelay
-                }
-                setInterval(function(p){
-                    index += 1
-                    if (index >= p.images.length) {
-                        index = 0
-                    }
-                    projectScreen.src = "images/" + p.images[index]
-                }, imageDelay, p)
-            }
+            projectScreen.src = "images/" + p.image
+            projectScreen.dataset.altSrc = "images/" + p.altImage
+            projectScreen.addEventListener("mouseover", () => swapSrc(projectScreen))
+            projectScreen.addEventListener("mouseout", () => swapSrc(projectScreen))
             const entry = projectEntry.querySelector('.star-entry')
             setupLink(entry)
             starGrid.appendChild(projectEntry)
@@ -46,6 +35,12 @@ function populateProjects(projects) {
             projList.appendChild(projectEntry)
         }
     }
+}
+
+function swapSrc (node) {
+    let a = node.src
+    node.src = node.dataset.altSrc
+    node.dataset.altSrc = a
 }
 
 function setupLink (node) {
