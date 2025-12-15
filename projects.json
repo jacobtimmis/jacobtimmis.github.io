@@ -22,14 +22,9 @@
         "date": "2025-08-17 UTC",
         "link": "https://dfishy.itch.io/odysseed",
         "brief": "Seed collecting adventure",
-        "icon": "seed.png"
-    },
-    {
-        "name": "Lightline",
-        "date": "2023-08-19 UTC",
-        "link": "https://juyr.itch.io/lightline",
-        "brief": "Cowboy, roguelike, survive the night",
-        "icon": "light_line.png"
+        "icon": "seed.png",
+        "image": "os_0.png",
+        "altImage": "os_1.png"
     },
     {
         "name": "Bonus Build",
@@ -37,6 +32,13 @@
         "link": "https://juyr.itch.io/bonus-build",
         "brief": "Block stacking roguelike, high-score chaser",
         "icon": "bonus_build.png"
+    },
+    {
+        "name": "Lightline",
+        "date": "2023-08-19 UTC",
+        "link": "https://juyr.itch.io/lightline",
+        "brief": "Cowboy, roguelike, survive the night",
+        "icon": "light_line.png"
     },
     {
         "name": "King of the Tower",
