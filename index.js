@@ -1,61 +1,43 @@
-document.addEventListener('DOMContentLoaded', begin)
+document.addEventListener('DOMContentLoaded', onContentLoaded)
 
-function begin() {
+function onContentLoaded() {
     fetch('projects.json')
-        .then   (response => response.json())
-        .then   (data => populateProjects(data))
-        .catch  (error => console.error('Error building projects:', error))
+        .then(response => response.json())
+        .then(data => populateProjects(data))
+        .catch(error => console.error('Error getting projects:', error))
 }
 
 function populateProjects(projects) {
-    const projList = document.getElementById('small-card-container')
-    const smallEntry = document.getElementById('small-card')
-    const starGrid = document.getElementById('large-card-container')
-    const starEntry = document.getElementById('large-card')
-    for (p of projects) {
-        if (p.hidden) { continue }
-        if (p.image) {
-            const projectEntry = starEntry.content.cloneNode(true)
-            setupEntry(projectEntry)
-            const projectScreen = projectEntry.querySelector('.cover')
-            projectScreen.src = "images/" + p.image
-            projectScreen.dataset.altSrc = "images/" + p.altImage
-            projectScreen.addEventListener("mouseover", () => swapSrc(projectScreen))
-            projectScreen.addEventListener("mouseout", () => swapSrc(projectScreen))
-            const entry = projectEntry.querySelector('.card')
-            setupLink(entry)
-            starGrid.appendChild(projectEntry)
+    const containerSmall = document.getElementById('small-card-container')
+    const containerLarge = document.getElementById('large-card-container')
+    const templateSmallCard = document.getElementById('small-card')
+    const templateLargeCard = document.getElementById('large-card')
+    for (const project of projects) {
+        if (project.hidden) { continue }
+        if (getProjectSizeIsLarge(project)) {
+            const instance = templateLargeCard.content.cloneNode(true)
+            addCardGeneric(instance, project)
+            addCardCover(instance, project)
+            containerLarge.appendChild(instance)
         } else {
-            const projectEntry = smallEntry.content.cloneNode(true)
-            setupEntry(projectEntry)
-            const projRoot = projectEntry.querySelector('.card')
-            setupLink(projRoot)
-            projList.appendChild(projectEntry)
+            const instance = templateSmallCard.content.cloneNode(true)
+            addCardGeneric(instance, project)
+            containerSmall.appendChild(instance)
         }
     }
 }
 
-function swapSrc (node) {
-    let a = node.src
-    node.src = node.dataset.altSrc
-    node.dataset.altSrc = a
+function getProjectSizeIsLarge(project) {
+    return project.image && project.altImage
 }
 
-function setupLink (node) {
-    let link = p.link
-    if (link) {
-        node.onclick = () => window.location.href = link
-        node.classList.add('clickable-project')
-    }
-}
-
-function setupEntry (projectEntry) {
-    const projectIcon = projectEntry.querySelector('.project-icon')
-    projectIcon.src = "icons/" + p.icon
-    const projectName = projectEntry.querySelector('.name')
-    projectName.textContent = p.name
-    const projectDate = projectEntry.querySelector('.project-date')
-    const date = new Date(p.date)
+function addCardGeneric(instance, project) {
+    const projectIcon = instance.querySelector('.project-icon')
+    projectIcon.src = "icons/" + project.icon
+    const projectName = instance.querySelector('.name')
+    projectName.textContent = project.name
+    const projectDate = instance.querySelector('.project-date')
+    const date = new Date(project.date)
     if (!isNaN(date)) {
         const localeDate = date.toLocaleDateString('en', {
             day: 'numeric',
@@ -66,22 +48,16 @@ function setupEntry (projectEntry) {
     } else {
         projectDate.textContent = ""
     }
-    const projectBrief = projectEntry.querySelector('.project-brief')
-    projectBrief.textContent = p.brief
+    const projectBrief = instance.querySelector('.project-brief')
+    projectBrief.textContent = project.brief
+    const card = instance.querySelector('.card')
+    let link = project.link
+    if (link) {
+        card.onclick = () => window.location.href = link
+    }
 }
 
-function addElement(parent, type, classes, textContent) {
-    const element = document.createElement(type)
-    element.textContent = textContent
-    element.classList = classes
-    parent.appendChild(element)
-    return element
-}
-
-function showGameEmbed () {
-    gameEmbed.style.display = 'flex'
-}
-
-function hideGameEmbed () {
-    gameEmbed.style.display = 'none'
+function addCardCover(instance, project) {
+    const projectScreen = instance.querySelector('.cover')
+    projectScreen.src = "images/" + project.image
 }
