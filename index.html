@@ -22,30 +22,32 @@
         <meta property="twitter:title" content="jacobtimmis.github.io">
     </head>
 
-    <template id="small-entry">
-        <div class="project">
-            <img class="project-icon" src="icons/burnt_legacy.png">
-            <div class="project-info">
-                <div class="project-header">
-                    <div class="project-title">
-                        <h3 class="project-name">Name</h3>
+    <template id="small-card">
+        <div class="card">
+            <div class="card-content">
+                <img class="project-icon" src="icons/burnt_legacy.png">
+                <div class="flex-grow">
+                    <div class="project-header">
+                        <div class="project-title">
+                            <h3 class="name">Name</h3>
+                        </div>
+                        <p class="project-date">Date</p>
                     </div>
-                    <p class="project-date">Date</p>
+                    <p class="project-brief">Brief</p>
                 </div>
-                <p class="project-brief">Brief</p>
             </div>
         </div>
     </template>
 
-    <template id="star-entry">
-        <div class="star-entry">
-            <img class="screen" src="icons/burnt_legacy.png" />
-            <div class="project">
+    <template id="large-card">
+        <div class="card">
+            <img class="cover" src="images/rr_0.png" />
+            <div class="card-content">
                 <img class="project-icon" src="icons/burnt_legacy.png">
-                <div class="project-info">
+                <div class="flex-grow">
                     <div class="project-header">
                         <div class="project-title">
-                            <h3 class="project-name">Name</h3>
+                            <h3 class="name">Name</h3>
                         </div>
                         <p class="project-date">Date</p>
                     </div>
@@ -56,21 +58,19 @@
     </template>
 
     <body>
-        <div class="container-lg px-3 my-5">
-            <h1 class="main-title">Games by Jacob Timmis</h1>
-    
-            <div id="contact-box">
-                <a href="mailto: jacobtimmis07@gmail.com">Email</a>
-                <a href="https://github.com/jacobtimmis">GitHub</a>
-                <a href="https://juyr.itch.io/">Itch</a>
-            </div>
+        <h1>Games by Jacob Timmis</h1>
+
+        <div id="contact-box">
+            <a href="mailto: jacobtimmis07@gmail.com">Email</a>
+            <a href="https://github.com/jacobtimmis">GitHub</a>
+            <a href="https://juyr.itch.io/">Itch</a>
         </div>
-        
-        <div class="container-lg px-3 my-5 flex-v">
-            <div id="star-grid" class="star-grid">
-            </div>
-            <div id="project-list">
-            </div>
+
+        <hr />
+
+        <div id="container-container">
+            <div id="large-card-container"></div>
+            <div id="small-card-container"></div>
         </div>
     </body>
 </html>

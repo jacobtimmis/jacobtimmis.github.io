@@ -4,33 +4,31 @@ function begin() {
     fetch('projects.json')
         .then   (response => response.json())
         .then   (data => populateProjects(data))
-        .catch  (error => console.error('Error fetching projects:', error))
-    gameEmbed = document.getElementById('game-embed')
-    iframe = document.getElementById('iframe')
+        .catch  (error => console.error('Error building projects:', error))
 }
 
 function populateProjects(projects) {
-    const projList = document.getElementById('project-list')
-    const smallEntry = document.getElementById('small-entry')
-    const starGrid = document.getElementById('star-grid')
-    const starEntry = document.getElementById('star-entry')
+    const projList = document.getElementById('small-card-container')
+    const smallEntry = document.getElementById('small-card')
+    const starGrid = document.getElementById('large-card-container')
+    const starEntry = document.getElementById('large-card')
     for (p of projects) {
         if (p.hidden) { continue }
         if (p.image) {
             const projectEntry = starEntry.content.cloneNode(true)
             setupEntry(projectEntry)
-            const projectScreen = projectEntry.querySelector('.screen')
+            const projectScreen = projectEntry.querySelector('.cover')
             projectScreen.src = "images/" + p.image
             projectScreen.dataset.altSrc = "images/" + p.altImage
             projectScreen.addEventListener("mouseover", () => swapSrc(projectScreen))
             projectScreen.addEventListener("mouseout", () => swapSrc(projectScreen))
-            const entry = projectEntry.querySelector('.star-entry')
+            const entry = projectEntry.querySelector('.card')
             setupLink(entry)
             starGrid.appendChild(projectEntry)
         } else {
             const projectEntry = smallEntry.content.cloneNode(true)
             setupEntry(projectEntry)
-            const projRoot = projectEntry.querySelector('.project')
+            const projRoot = projectEntry.querySelector('.card')
             setupLink(projRoot)
             projList.appendChild(projectEntry)
         }
@@ -54,7 +52,7 @@ function setupLink (node) {
 function setupEntry (projectEntry) {
     const projectIcon = projectEntry.querySelector('.project-icon')
     projectIcon.src = "icons/" + p.icon
-    const projectName = projectEntry.querySelector('.project-name')
+    const projectName = projectEntry.querySelector('.name')
     projectName.textContent = p.name
     const projectDate = projectEntry.querySelector('.project-date')
     const date = new Date(p.date)
