@@ -76,6 +76,8 @@ hr {
     cursor: pointer;
     transition: all 0.18s ease-in-out;
     overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card:hover {
@@ -86,6 +88,9 @@ hr {
     padding: 1rem;
     display: flex;
     align-items: center;
+    background-color: white;
+    z-index: 1;
+    flex-grow: 1;
 }
 
 .flex-grow {
@@ -133,4 +138,9 @@ hr {
 
 .cover {
     width: 100%;
+    transition: all 0.2s ease;
+}
+
+.cover:hover {
+    scale: 1.2;
 }
