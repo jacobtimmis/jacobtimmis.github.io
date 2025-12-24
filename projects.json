@@ -90,13 +90,5 @@
         "date": "2023-10-03 UTC",
         "link": "https://juyr.itch.io/countdown",
         "brief": "Solve puzzles and share custom levels"
-    },
-    {
-        "id": "test",
-        "name": "Test",
-        "brief": "This is a test :)",
-        "date": "2002-06-11 UTC",
-        "link": "https://juyr.itch.io",
-        "hidden": false
     }
 ]
