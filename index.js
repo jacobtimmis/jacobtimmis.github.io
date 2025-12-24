@@ -27,13 +27,20 @@ function populateProjects(projects) {
     }
 }
 
+function exists(url) {
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status != 404;
+}
+
 function getProjectSizeIsLarge(project) {
-    return project.image && project.altImage
+    return exists("images/" + project.id + ".png")
 }
 
 function addCardGeneric(instance, project) {
     const projectIcon = instance.querySelector('.project-icon')
-    projectIcon.src = "icons/" + project.icon
+    projectIcon.src = "icons/" + project.id + ".png"
     const projectName = instance.querySelector('.name')
     projectName.textContent = project.name
     const projectDate = instance.querySelector('.project-date')
@@ -59,5 +66,5 @@ function addCardGeneric(instance, project) {
 
 function addCardCover(instance, project) {
     const projectScreen = instance.querySelector('.cover')
-    projectScreen.src = "images/" + project.image
+    projectScreen.src = "images/" + project.id + ".png"
 }

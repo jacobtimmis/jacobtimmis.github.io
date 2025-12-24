@@ -1,104 +1,94 @@
 [
     {
+        "id": "seed",
         "name": "Odysseed",
         "date": "2025-08-17 UTC",
         "link": "https://dfishy.itch.io/odysseed",
-        "brief": "Flower planting adventure",
-        "icon": "seed.png",
-        "image": "os_0.png",
-        "altImage": "os_1.png"
+        "brief": "Flower planting adventure"
     },
     {
+        "id": "rr",
         "name": "Rule Reversal",
         "date": "2023-07-07 UTC",
         "link": "https://juyr.itch.io/rule-reversal",
-        "brief": "Two cats, different rules",
-        "icon": "rule_reversal.png",
-        "image": "rr_1.png",
-        "altImage": "rr_0.png"
+        "brief": "Two cats, different rules"
     },
     {
+        "id": "inspector",
         "name": "The Inspector",
         "date": "2024-08-20 UTC",
         "link": "https://juyr.itch.io/inspector",
-        "brief": "Solve sliding puzzles on a strange island",
-        "icon": "inspector.png",
-        "image": "inspector_0.png",
-        "altImage": "inspector_1.png"
+        "brief": "Solve sliding puzzles on a strange island"
     },
     {
+        "id": "bb",
         "name": "Bonus Build",
         "date": "2024-06-03 UTC",
         "link": "https://juyr.itch.io/bonus-build",
-        "brief": "Block stacking roguelike, high-score chaser",
-        "icon": "bonus_build.png",
-        "image": "bb_0.png",
-        "altImage": "bb_1.png"
+        "brief": "Block stacking roguelike, high-score chaser"
     },
     {
+        "id": "lightline",
         "name": "Lightline",
         "date": "2023-08-19 UTC",
         "link": "https://juyr.itch.io/lightline",
-        "brief": "Cowboy, roguelike, survive the night",
-        "icon": "light_line.png"
+        "brief": "Cowboy, roguelike, survive the night"
     },
     {
+        "id": "kott",
         "name": "King of the Tower",
         "date": "2024-10-11 UTC",
         "link": "https://juyr.itch.io/kott",
-        "brief": "Retro 1-bit platformer",
-        "icon": "kott.png"
+        "brief": "Retro 1-bit platformer"
     },
     {
+        "id": "michael",
         "name": "michael got stuck in a power drill",
         "date": "2025-07-21 UTC",
         "link": "https://dfishy.itch.io/power-drill",
-        "brief": "Mining game, with roguelike upgrades",
-        "icon": "michael.png"
+        "brief": "Mining game, with roguelike upgrades"
     },
     {
+        "id": "museum",
         "name": "The National Museum",
         "date": "2023-10-02 UTC",
         "link": "https://juyr.itch.io/the-national-museum",
-        "brief": "Inventory management meets tower defense",
-        "icon": "museum.png"
+        "brief": "Inventory management meets tower defense"
     },
     {
+        "id": "snakemeleon",
         "name": "Snakemeleon",
         "date": "2023-09-18 UTC",
         "link": "https://juyr.itch.io/snakemeleon",
-        "brief": "Color changing snake sokoban",
-        "icon": "snakemeleon.png"
+        "brief": "Color changing snake sokoban"
     },
     {
+        "id": "burntlegacy",
         "name": "Burnt Legacy",
         "date": "2023-12-17 UTC",
         "link": "https://juyr.itch.io/burnt-legacy",
         "brief": "Document Detective Mystery",
-        "icon": "burnt_legacy.png",
         "hidden": true
     },
     {
+        "id": "split",
         "name": "Split",
         "date": "2024-07-04 UTC",
         "link": "games/split.html",
-        "brief": "Rule discovery puzzler",
-        "icon": "split.png",
-        "embed": true
+        "brief": "Rule discovery puzzler"
     },
     {
+        "id": "passersby",
         "name": "Passers By",
         "date": "2024-07-10 UTC",
         "link": "games/passersby.html",
-        "brief": "Help people find love...",
-        "icon": "passersby.png",
-        "embed": true
+        "brief": "Help people find love..."
     },
     {
+        "id": "countdown",
         "name": "Countdown!",
         "date": "2023-10-03 UTC",
         "link": "https://juyr.itch.io/countdown",
-        "brief": "Solve puzzles and share custom levels",
-        "icon": "countdown.png"
+        "brief": "Solve puzzles and share custom levels"
     }
 ]
