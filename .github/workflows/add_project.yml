@@ -31,14 +31,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Test jsonify
+      - name: Echo github
         run: echo '${{ toJSON(github) }}'
+      - name: Echo secrets
+        run: echo '${{ toJSON(secrets) }}'
       - name: What's here?
         run: ls
       - name: Run add_project.py with inputs as args
         run: python add_project.py --id '${{ github.event.inputs.id }}' --name '${{ github.event.inputs.name }}' --brief '${{ github.event.inputs.brief }}' --date '${{ github.event.inputs.date }}' --link '${{ github.event.inputs.link }}' --hidden '${{ github.event.inputs.hidden }}'
       - name: Swap to SSH
-        run: git remote set-url origin ${{ secrets.ssh }}
+        run: git remote set-url origin ${{ github.event.repository.ssh_url }}
       - name: Check for changes
         run: git status
       - name: Stage changed files
