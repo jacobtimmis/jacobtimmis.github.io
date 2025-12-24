@@ -1,0 +1,15 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Test Add Project",
+            "type": "shell",
+            "command": "python add_project.py --id 'test' --name 'Test' --brief 'This is a test' --date '2025-12-24 UTC' --link 'https://juyr.itch.io'",
+            "problemMatcher": [
+                "$python"
+            ]
+        }
+    ]
+}
