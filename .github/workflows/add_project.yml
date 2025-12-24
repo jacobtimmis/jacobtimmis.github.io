@@ -35,3 +35,15 @@ jobs:
         run: ls
       - name: Run add_project.py with inputs as args
         run: python add_project.py --id '${{ github.event.inputs.id }}' --name '${{ github.event.inputs.name }}' --brief '${{ github.event.inputs.brief }}' --date '${{ github.event.inputs.date }}' --link '${{ github.event.inputs.link }}' --hidden '${{ github.event.inputs.hidden }}'
+      - name: Swap to SSH
+        run: git remote set-url origin ${{ secrets.ssh }}
+      - name: Check for changes
+        run: git status
+      - name: Stage changed files
+        run: git add .
+      - name: Commit changed files
+        run: git commit -m "Add project ${{ github.event.inputs.name }}"
+      - name: Fetch from main
+        run: git fetch origin main
+      - name: Push to main
+        run: git push origin HEAD:main
