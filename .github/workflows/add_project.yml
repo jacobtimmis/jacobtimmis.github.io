@@ -4,28 +4,28 @@ on:
     inputs:
       id:
         type: string
-        description: ID of this project, used to retrieve the icon and optional image.
+        description: ID
         required: true
       name:
         type: string
-        description: Name of this project, shown on the portfolio.
+        description: Name
         required: true
       brief:
         type: string
-        description: Description of this project, shown on the portfolio.
+        description: Description
         required: true
       date:
         type: string
-        description: When this project was initially published/created.
+        description: Date
         required: true
         default: "2002-06-11 UTC"
       link:
         type: string
-        description: Where this project can be viewed when clicked on. Typically, the itch.io page.
+        description: Link
         required: true
       hidden:
         type: boolean
-        description: Whether to hide this on the portfolio or not.
+        description: Hidden?
 jobs:
   deploy:
     runs-on: ubuntu-latest
