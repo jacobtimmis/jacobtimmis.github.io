@@ -29,25 +29,16 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v1
-      - name: Echo github
-        run: echo '${{ toJSON(github) }}'
-      - name: Echo secrets
-        run: echo '${{ toJSON(secrets) }}'
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.head_ref }}
       - name: What's here?
         run: ls
       - name: Run add_project.py with inputs as args
         run: python add_project.py --id '${{ github.event.inputs.id }}' --name '${{ github.event.inputs.name }}' --brief '${{ github.event.inputs.brief }}' --date '${{ github.event.inputs.date }}' --link '${{ github.event.inputs.link }}' --hidden '${{ github.event.inputs.hidden }}'
-      - name: Swap to SSH
-        run: git remote set-url origin ${{ github.event.repository.ssh_url }}
-      - name: Check for changes
-        run: git status
-      - name: Stage changed files
-        run: git add .
-      - name: Commit changed files
-        run: git commit -m "Add project ${{ github.event.inputs.name }}"
-      - name: Fetch from main
-        run: git fetch origin main
-      - name: Push to main
-        run: git push origin HEAD:main
+      - uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: Add project ${{ github.event.inputs.name }}
