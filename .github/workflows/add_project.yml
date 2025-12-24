@@ -33,5 +33,5 @@ jobs:
       - uses: actions/checkout@v1
       - name: What's here?
         run: ls
-      - name: Run add_project.py
-        run: python add_project.py --id ${{ github.event.inputs.id }} --name ${{ github.event.inputs.name }} --brief ${{ github.event.inputs.brief }} --date ${{ github.event.inputs.date }} --link ${{ github.event.inputs.link }} --hidden ${{ github.event.inputs.hidden }}
+      - name: Run add_project.py with inputs as args
+        run: python add_project.py --id '${{ github.event.inputs.id }}' --name '${{ github.event.inputs.name }}' --brief '${{ github.event.inputs.brief }}' --date '${{ github.event.inputs.date }}' --link '${{ github.event.inputs.link }}' --hidden '${{ github.event.inputs.hidden }}'
