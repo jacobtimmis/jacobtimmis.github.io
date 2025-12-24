@@ -30,4 +30,4 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hello, world"
+      - run: python ./add_project.py --id ${{ github.event.inputs.id }} --name ${{ github.event.inputs.name }} --brief ${{ github.event.inputs.brief }} --date ${{ github.event.inputs.date }} --link ${{ github.event.inputs.link }} --hidden ${{ github.event.inputs.hidden }}
