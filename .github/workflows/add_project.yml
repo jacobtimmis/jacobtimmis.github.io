@@ -1,0 +1,2 @@
+name: Add project
+on: workflow_dispatch
