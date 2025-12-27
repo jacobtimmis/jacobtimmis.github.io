@@ -2,6 +2,7 @@ import argparse
 import json
 
 HIDDEN_ARG = "hidden"
+COVER_ARG = "cover"
 
 
 def main():
@@ -12,11 +13,14 @@ def main():
     parser.add_argument("--date", required=True, type=str)
     parser.add_argument("--link", required=True, type=str)
     parser.add_argument(f"--{HIDDEN_ARG}", default="False")
+    parser.add_argument(f"--{COVER_ARG}", default="False")
 
     args = vars(parser.parse_args())
 
     if args[HIDDEN_ARG].lower() == "false":
         args[HIDDEN_ARG] = False
+    if args[COVER_ARG].lower() == "false":
+        args[COVER_ARG] = False
 
     with open("projects.json", "r") as json_file:
         json_obj = json.loads(json_file.read())

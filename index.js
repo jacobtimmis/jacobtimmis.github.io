@@ -27,15 +27,8 @@ function populateProjects(projects) {
     }
 }
 
-function exists(url) {
-    var http = new XMLHttpRequest();
-    http.open('HEAD', url, false);
-    http.send();
-    return http.status != 404;
-}
-
 function getProjectSizeIsLarge(project) {
-    return exists("images/" + project.id + ".png")
+    return project.cover
 }
 
 function addCardGeneric(instance, project) {

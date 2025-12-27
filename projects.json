@@ -4,28 +4,32 @@
         "name": "Odysseed",
         "date": "2025-08-17 UTC",
         "link": "https://dfishy.itch.io/odysseed",
-        "brief": "Flower planting adventure"
+        "brief": "Flower planting adventure",
+        "cover": true
     },
     {
         "id": "rr",
         "name": "Rule Reversal",
         "date": "2023-07-07 UTC",
         "link": "https://juyr.itch.io/rule-reversal",
-        "brief": "Two cats, different rules"
+        "brief": "Two cats, different rules",
+        "cover": true
     },
     {
         "id": "inspector",
         "name": "The Inspector",
         "date": "2024-08-20 UTC",
         "link": "https://juyr.itch.io/inspector",
-        "brief": "Solve sliding puzzles on a strange island"
+        "brief": "Solve sliding puzzles on a strange island",
+        "cover": true
     },
     {
         "id": "bb",
         "name": "Bonus Build",
         "date": "2024-06-03 UTC",
         "link": "https://juyr.itch.io/bonus-build",
-        "brief": "Block stacking roguelike, high-score chaser"
+        "brief": "Block stacking roguelike, high-score chaser",
+        "cover": true
     },
     {
         "id": "lightline",
