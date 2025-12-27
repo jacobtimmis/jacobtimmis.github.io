@@ -1,5 +1,6 @@
 import argparse
 import json
+from datetime import datetime
 
 HIDDEN_ARG = "hidden"
 COVER_ARG = "cover"
@@ -31,6 +32,8 @@ def main():
         json.dump(json_obj, json_file, indent=4)
         json_file.write("\n")
 
+    with open("lastupdate.txt", "w") as last_update_file:
+        last_update_file.write(datetime.today().strftime('%Y-%m-%d UTC'))
 
 if __name__ == "__main__":
     main()
