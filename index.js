@@ -2,19 +2,28 @@ document.addEventListener('DOMContentLoaded', onContentLoaded)
 
 function onContentLoaded() {
     fetch('projects.json')
-        .then(response => response.json())
-        .then(data => populateProjects(data))
+        .then(res => res.json())
+        .then(res => populateProjects(res))
         .catch(error => console.error('Error getting projects:', error))
+    fetch('lastupdate.txt')
+        .then(res => res.text())
+        .then(res => setLastUpdate(res))
+        .catch(error => console.error('Error setting last update:', error))
+}
+
+function setLastUpdate(date) {
+    const lastUpdate = document.getElementById('last-update')
+    lastUpdate.textContent = "This site was last updated on " + formatDate(date)
 }
 
 function populateProjects(projects) {
-    const containerSmall = document.getElementById('small-card-container')
-    const containerLarge = document.getElementById('large-card-container')
     const templateSmallCard = document.getElementById('small-card')
     const templateLargeCard = document.getElementById('large-card')
+    const containerSmall = document.getElementById('small-card-container')
+    const containerLarge = document.getElementById('large-card-container')
     for (const project of projects) {
         if (project.hidden) { continue }
-        if (getProjectSizeIsLarge(project)) {
+        if (project.cover) {
             const instance = templateLargeCard.content.cloneNode(true)
             addCardGeneric(instance, project)
             addCardCover(instance, project)
@@ -27,27 +36,13 @@ function populateProjects(projects) {
     }
 }
 
-function getProjectSizeIsLarge(project) {
-    return project.cover
-}
-
 function addCardGeneric(instance, project) {
     const projectIcon = instance.querySelector('.project-icon')
     projectIcon.src = "icons/" + project.id + ".png"
     const projectName = instance.querySelector('.name')
     projectName.textContent = project.name
     const projectDate = instance.querySelector('.project-date')
-    const date = new Date(project.date)
-    if (!isNaN(date)) {
-        const localeDate = date.toLocaleDateString('en', {
-            day: 'numeric',
-            year: 'numeric',
-            month: 'long',
-        })
-        projectDate.textContent = localeDate
-    } else {
-        projectDate.textContent = ""
-    }
+    projectDate.textContent = formatDate(project.date)
     const projectBrief = instance.querySelector('.project-brief')
     projectBrief.textContent = project.brief
     const card = instance.querySelector('.card')
@@ -60,4 +55,13 @@ function addCardGeneric(instance, project) {
 function addCardCover(instance, project) {
     const projectScreen = instance.querySelector('.cover')
     projectScreen.src = "images/" + project.id + ".png"
+}
+
+function formatDate(date) {
+    const dateDate = new Date(date)
+    if (!isNaN(dateDate)) {
+        return dateDate.toLocaleDateString('en', { day: 'numeric', month: 'long', year: 'numeric' })
+    } else {
+        return "no read date"
+    }
 }

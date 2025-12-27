@@ -45,6 +45,11 @@ hr {
     margin: var(--gap) 0;
 }
 
+#end-box {
+    margin: var(--gap) 0;
+    color: lightgray;
+}
+
 #container-container {
     display: flex;
     flex-direction: column;
