@@ -1,7 +1,12 @@
 :root {
     --corner-radius: 5px;
     --gap: 1rem;
-    --shadow-color: rgba(0, 0, 0, 0.1)
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --light-color: lightgray;
+}
+
+* {
+    margin: 0;
 }
 
 html {
@@ -10,44 +15,61 @@ html {
 
 body {
     max-width: 920px;
-    margin-top: 32px !important;
-    margin-bottom: 32px !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
     margin-right: auto;
     margin-left: auto;
     padding-right: 16px !important;
     padding-left: 16px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 }
 
 h1 {
-    font-size: 2em;
-    margin: 0.25em 0;
-}
-
-p {
-    margin: 0;
+    font-size: 2rem;
 }
 
 a {
+    padding: 0.5rem 1rem;
+    background-color: rgb(250, 250, 250) !important;
+    border-radius: var(--corner-radius);
     background-color: transparent;
-    color: #0366d6;
+    color: black;
+    text-decoration: none
+}
 
+a:hover {
+    background-color: rgb(245, 245, 245) !important;
 }
 
 hr {
-    margin: var(--gap) 0;
     color: var(--shadow-color);
+}
+
+#title-box {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+    #title-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--gap);
+    }
 }
 
 #contact-box {
     display: flex;
     flex-direction: row;
     gap: var(--gap);
-    margin: var(--gap) 0;
 }
 
 #end-box {
-    margin: var(--gap) 0;
-    color: lightgray;
+    color: var(--light-color);
 }
 
 #container-container {
@@ -63,18 +85,17 @@ hr {
 }
 
 #large-card-container {
-    --min-item-width: 220px;
-    --max-columns: 2;
     display: grid;
-    align-items: start;
     gap: var(--gap);
-    grid-template-columns: repeat(auto-fit,
-            minmax(min(100%,
-                    max(var(--min-item-width),
-                        calc((100% - (var(--max-columns) - 1) * var(--gap)) / var(--max-columns)))),
-                1fr));
+    align-items: start;
+    grid-template-columns: 1fr;
 }
 
+@media (min-width: 768px) {
+    #large-card-container:has(> :nth-child(2n):last-child) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 .card {
     border-radius: var(--corner-radius);
     box-shadow: 0 0px 2px var(--shadow-color);
@@ -90,7 +111,7 @@ hr {
 }
 
 .card-content {
-    padding: 1rem;
+    padding: var(--gap);
     display: flex;
     align-items: center;
     background-color: white;
@@ -119,18 +140,13 @@ hr {
     flex-wrap: wrap;
 }
 
-.name {
-    margin: 0;
-}
-
 .project-title {
     display: flex;
     justify-content: flex-start;
 }
 
 .project-date {
-    /* margin-left: auto; */
-    color: lightgray;
+    color: var(--light-color);
 }
 
 .project-brief {
