@@ -13,7 +13,7 @@ function onContentLoaded() {
 
 function setLastUpdate(date) {
     const lastUpdate = document.getElementById('last-update')
-    lastUpdate.textContent = "This site was last updated on " + formatDate(date)
+    lastUpdate.textContent = lastUpdate.textContent.replace("{date}", formatDate(date))
 }
 
 function populateProjects(projects) {
