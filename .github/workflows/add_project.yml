@@ -40,8 +40,8 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: What's here?
         run: ls
-      - name: Debug Inputs
-        run: echo "${{ toJSON(github.event.inputs) }}"
+      # - name: Debug Inputs
+      #   run: echo "${{ toJSON(github.event.inputs) }}"
       - name: Run add_project.py with inputs as args
         run: >
           python add_project.py
