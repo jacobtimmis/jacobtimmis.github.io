@@ -13,8 +13,8 @@ def main():
     parser.add_argument("--brief", required=True, type=str)
     parser.add_argument("--date", required=True, type=str)
     parser.add_argument("--link", required=True, type=str)
-    parser.add_argument(f"--{HIDDEN_ARG}", default=False, type=bool)
-    parser.add_argument(f"--{COVER_ARG}", default=False, type=bool)
+    parser.add_argument(f"--{HIDDEN_ARG}", action="store_true", default=False)
+    parser.add_argument(f"--{COVER_ARG}", action="store_true", default=False)
 
     args = vars(parser.parse_args())
 

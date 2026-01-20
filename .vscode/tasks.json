@@ -6,7 +6,7 @@
         {
             "label": "Test Add Project",
             "type": "shell",
-            "command": "python add_project.py --id 'test' --name 'Test' --brief 'This is a test' --date '2025-12-24 UTC' --link 'https://juyr.itch.io' --hidden 'False'",
+            "command": "python add_project.py --id 'test' --name 'Test' --brief 'This is a test' --date '2025-12-24 UTC' --link 'https://juyr.itch.io' --hidden",
             "problemMatcher": [
                 "$python"
             ]
