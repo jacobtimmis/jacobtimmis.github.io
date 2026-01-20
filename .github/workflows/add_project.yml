@@ -40,8 +40,18 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: What's here?
         run: ls
+      - name: Debug Inputs
+        run: echo "${{ toJSON(github.event.inputs) }}"
       - name: Run add_project.py with inputs as args
-        run: python add_project.py --id '${{ github.event.inputs.id }}' --name '${{ github.event.inputs.name }}' --brief '${{ github.event.inputs.brief }}' --date '${{ github.event.inputs.date }}' --link '${{ github.event.inputs.link }}' --hidden '${{ github.event.inputs.hidden }}' --hidden '${{ github.event.inputs.cover }}'
+        run: >
+          python add_project.py
+          --id '${{ github.event.inputs.id }}'
+          --name '${{ github.event.inputs.name }}'
+          --brief '${{ github.event.inputs.brief }}'
+          --date '${{ github.event.inputs.date }}'
+          --link '${{ github.event.inputs.link }}'
+          ${{ github.event.inputs.hidden == 'true' && '--hidden' || '' }}
+          ${{ github.event.inputs.cover == 'true' && '--cover' || '' }}
       - uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: Add project ${{ github.event.inputs.name }}
