@@ -103,14 +103,5 @@
         "link": "https://dfishy.itch.io/crank-it",
         "hidden": false,
         "cover": false
-    },
-    {
-        "id": "test",
-        "name": "Test",
-        "brief": "This is a test",
-        "date": "2002-06-11 UTC",
-        "link": "itch.io",
-        "hidden": false,
-        "cover": false
     }
 ]
