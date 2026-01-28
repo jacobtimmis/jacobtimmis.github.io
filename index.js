@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', onContentLoaded)
 
 function onContentLoaded() {
+    setupDarkMode()
     fetch('projects.json')
         .then(res => res.json())
         .then(res => populateProjects(res))
@@ -9,6 +10,39 @@ function onContentLoaded() {
         .then(res => res.text())
         .then(res => setLastUpdate(res))
         .catch(error => console.error('Error setting last update:', error))
+}
+
+function setupDarkMode() {
+    const body = document.body
+    const toggleBtn = document.getElementById('dark-mode-toggle')
+    if (!toggleBtn) return
+    
+    const savedTheme = localStorage.getItem('theme')
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    
+    if (savedTheme === 'dark' || (!savedTheme && mediaQuery.matches)) {
+        body.classList.add('dark-mode')
+        toggleBtn.textContent = '☀️'
+    }
+
+    toggleBtn.onclick = () => {
+        body.classList.toggle('dark-mode')
+        const isDark = body.classList.contains('dark-mode')
+        toggleBtn.textContent = isDark ? '☀️' : '🌙'
+        localStorage.setItem('theme', isDark ? 'dark' : 'light')
+    }
+
+    mediaQuery.addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            if (e.matches) {
+                body.classList.add('dark-mode')
+                toggleBtn.textContent = '☀️'
+            } else {
+                body.classList.remove('dark-mode')
+                toggleBtn.textContent = '🌙'
+            }
+        }
+    })
 }
 
 function setLastUpdate(date) {
