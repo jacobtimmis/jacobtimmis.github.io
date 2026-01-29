@@ -97,7 +97,7 @@ function addCardCover(instance, project) {
         const y = e.clientY - rect.top
         const xPct = (x / rect.width) - 0.5
         const yPct = (y / rect.height) - 0.5
-        projectScreen.style.transform = `translate(${xPct * 20}px, ${yPct * 20}px)`
+        projectScreen.style.transform = `translate(${xPct * 10}%, ${yPct * 10}%)`
     })
 
     card.addEventListener('mouseleave', () => {
