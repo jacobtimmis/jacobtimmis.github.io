@@ -180,7 +180,7 @@ hr {
 
 .cover {
     width: 100%;
-    transition: scale 0.2s ease;
+    transition: scale 0.2s ease, transform 0.1s ease-out;
 }
 
 .card:hover .cover {
