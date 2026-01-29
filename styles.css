@@ -11,6 +11,11 @@
     --hr-color: rgba(0, 0, 0, 0.1);
 }
 
+::selection {
+    background-color: #ffff00;
+    color: black;
+}
+
 body.dark-mode {
     --bg-color: #1a1a1a;
     --text-color: #f0f0f0;
